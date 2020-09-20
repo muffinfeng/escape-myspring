@@ -1,0 +1,3 @@
+###
+GET http://localhost:8080/getTimeParam?date=2020-12-01 00:00:00
+Accept: application/json
