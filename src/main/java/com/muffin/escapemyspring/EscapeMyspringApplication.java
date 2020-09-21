@@ -3,8 +3,10 @@ package com.muffin.escapemyspring;
 import com.muffin.escapemyspring.applicationContext.UseInitializer;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.web.servlet.ServletComponentScan;
 
 @SpringBootApplication
+@ServletComponentScan("com.muffin.escapemyspring")//filter扫描
 public class EscapeMyspringApplication {
 
 	public static void main(String[] args) {
@@ -15,5 +17,4 @@ public class EscapeMyspringApplication {
 //		application.addInitializers(new UseInitializer());
 //		application.run(args);
 	}
-
 }
