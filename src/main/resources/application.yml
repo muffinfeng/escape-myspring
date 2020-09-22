@@ -1,10 +1,17 @@
 spring:
+    task:
+      scheduling:
+        pool:
+          size: 5
+    profiles:
+      active: ${spring.profiles.active}
     jpa:
         open-in-view: false
     datasource:
         url: jdbc:mysql://127.0.0.1:3306/imooc_escape?autoReconnect=true&useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=Asia/Shanghai
         username: root
-        password: 684817
+        ##password: 684817
+        password: NMPA_nfs_2020.!@
         type: com.zaxxer.hikari.HikariDataSource
         driver-class-name: com.mysql.cj.jdbc.Driver
         hikari:
@@ -16,3 +23,7 @@ spring:
             connection-test-query: SELECT 1
             pool-name: SpringEscapeHikariPool
 
+escape:
+    user:
+        name: qinyi
+        age: 20

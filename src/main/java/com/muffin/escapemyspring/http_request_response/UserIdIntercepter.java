@@ -16,15 +16,12 @@ public class UserIdIntercepter implements HandlerInterceptor {
         if(RequestParseUtil.isJson(request)){
             String json = RequestParseUtil.getBodyString(request);
             User user;
-            log.info("UserIdIntercepter json : {}",json);
             try{
                 user = new ObjectMapper().readValue(json,User.class);
                 log.info("UserIdIntercepter logger user1 : {}",user);
             }catch (Exception e){
                 user = null;
             }
-
-            log.info("UserIdIntercepter logger user2 : {}",user);
         }
         log.info("UserIdIntercepter logger user nonono");
         return true;
@@ -32,11 +29,9 @@ public class UserIdIntercepter implements HandlerInterceptor {
 
     @Override
     public void postHandle(HttpServletRequest request, HttpServletResponse response, Object handler, ModelAndView modelAndView) throws Exception {
-
     }
 
     @Override
     public void afterCompletion(HttpServletRequest request, HttpServletResponse response, Object handler, Exception ex) throws Exception {
-
     }
 }

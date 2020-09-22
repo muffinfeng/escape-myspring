@@ -59,7 +59,8 @@
 		</dependency>
 	</dependencies>
 
-	<build>
+	<build><!-- 将工程打包成jar包的插件 -->
+		<finalName>${artifactId}</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>

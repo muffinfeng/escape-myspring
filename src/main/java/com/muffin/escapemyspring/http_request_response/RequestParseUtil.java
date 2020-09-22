@@ -41,7 +41,6 @@ public class RequestParseUtil {
         }catch (IOException e){
             throw new RuntimeException();
         }
-
         return sb.toString();
     }
 }
